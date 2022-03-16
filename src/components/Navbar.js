@@ -6,7 +6,7 @@ export default function Navbar() {
     <div>
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <div className="text-center">
-    <span className='my-4 px-5 navbar-brand'>breaking<b>Times</b></span>
+    <span className='px-5 navbar-brand'>breaking<b>Times</b></span>
   </div>
 
 </nav>

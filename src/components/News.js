@@ -9,9 +9,10 @@ export default function News(props) {
 const [articles, setArticles] = useState([])
 const [page, setPage] = useState(1);
 const [totalResults, setTotalResults] = useState(0);
-const [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(true);
 
   document.title = "BreakingTimes";
+ 
 
 
 const updateNews= async () =>{
@@ -64,7 +65,8 @@ const fetchMoreData= async()=>{
       hasMore={articles.length !== totalResults}
       loader={<Spinner />}
     >
-    <div className="row">
+    <div className="container">
+    <div className="row overflow-hidden">
       {articles.map((article) => {
           return (
             <div className="col-md-6 col-lg-4 col-xl-3" key="{article.url}">
@@ -83,6 +85,7 @@ const fetchMoreData= async()=>{
             </div>
           );
         })}
+    </div>
     </div>
     </InfiniteScroll>
    
