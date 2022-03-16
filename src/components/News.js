@@ -34,7 +34,7 @@ const updateNews= async () =>{
 
 useEffect(() => {
  updateNews();
-},[]);
+});
 console.log(articles);
 
 const fetchMoreData= async()=>{
